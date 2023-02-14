@@ -62,10 +62,7 @@ _handleClick(e) {
     console.log(e);
   }
 
-  constructor() {
-    super();
-    this.slid = false;
-  }
+ 
  
   render() {
     return html`
