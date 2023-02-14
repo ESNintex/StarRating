@@ -48,7 +48,25 @@ export class StarsPlugin extends LitElement {
         }
         /* Modified from: https://github.com/mukulkant/Star-rating-using-pure-css */        
   `;
-
+ static getMetaConfig() {
+    return {
+      controlName: 'Star Rating',
+      fallbackDisableSubmit: false,
+      groupName: 'Rating',
+      version: '1.2',
+      properties: {
+        
+        outcome: {
+          title: 'Rating',
+          type: 'integer',
+        	description: 'Insert a Variable, to save the Rating',
+          isValueField: true
+        },        
+      },
+      events: ["ntx-value-change"],
+    };
+  }
+  
 _handleClick(e) {
    const args = {
         bubbles: true,
