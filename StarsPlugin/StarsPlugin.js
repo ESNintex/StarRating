@@ -86,17 +86,16 @@ export class StarsPlugin extends LitElement {
 
 
   onClick(e) {
-    /*
     const args = {
-      bubbles: true,
-      cancelable: false,
-      composed: true,
-      // value coming from input change event. 
-      detail:e,
+        bubbles: true,
+        cancelable: false,
+        composed: true,
+        // value coming from input change event. 
+        detail:e,
     };
     const event = new CustomEvent('ntx-value-change', args);
     this.dispatchEvent(event);
-*/
+
     console.log("TEST" +  e);
 
   }
