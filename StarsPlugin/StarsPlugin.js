@@ -10,7 +10,7 @@ export class StarsPlugin extends LitElement {
     return html`
      <div class="rate">
     
-    <input type="radio" id="star5" name="rate" value="5" @click=${() => this._handleClick(5)} />
+    <input type="radio" id="star5" name="rate" value="5" @click=${() => this._handleClick(5)}/>
     <label for="star5" title="text">5 stars</label>
     <input type="radio" id="star4" name="rate" value="4" @click=${() => this._handleClick(4)}/>
     <label for="star4" title="text">4 stars</label>
@@ -75,7 +75,8 @@ export class StarsPlugin extends LitElement {
         outcome: {
           title: 'Rating',
           type: 'integer',
-        	description: 'Insert a Variable, to save the Rating'
+        	description: 'Insert a Variable, to save the Rating',
+          isValueField: true
         },        
       },
       events: ["ntx-value-change"],
