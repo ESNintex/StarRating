@@ -54,8 +54,7 @@ export class StarsPlugin extends LitElement {
       fallbackDisableSubmit: false,
       groupName: 'Rating',
       version: '1.2',
-      properties: {
-        
+      properties: { 
         outcome: {
           title: 'Rating',
           type: 'integer',
@@ -79,8 +78,6 @@ _handleClick(e) {
     this.dispatchEvent(event);
     console.log(e);
   }
-
- 
  
   render() {
     return html`
