@@ -78,12 +78,7 @@ _handleClick(e) {
     this.dispatchEvent(event);
     console.log(e);
   }
-  constructor() {
-    super();
-    //this.checkAdress();
-    
-  }
- 
+  
   render() {
     return html`
      <div class="rate">
