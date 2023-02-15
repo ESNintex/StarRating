@@ -1,8 +1,8 @@
-import {LitElement, html, css} from 'lit';
-import {classMap} from 'lit/directives/class-map.js';
-import {animate} from '@lit-labs/motion';
+import { html,LitElement,css} from 'https://cdn.jsdelivr.net/gh/lit/dist@2/all/lit-all.min.js';
 
-export class MotionSlide extends LitElement {
+
+// define the component
+export class StarsPlugin extends LitElement {
   static properties = {
     slid: {type: Boolean},
   };
@@ -48,23 +48,40 @@ export class MotionSlide extends LitElement {
         }
         /* Modified from: https://github.com/mukulkant/Star-rating-using-pure-css */        
   `;
-
+ static getMetaConfig() {
+    return {
+      controlName: 'Star Rating',
+      fallbackDisableSubmit: false,
+      groupName: 'Rating',
+      version: '1.2',
+      properties: { 
+        outcome: {
+          title: 'Rating',
+          type: 'integer',
+        	description: 'Insert a Variable, to save the Rating',
+          isValueField: true
+        },        
+      },
+      events: ["ntx-value-change"],
+    };
+  }
+  
 _handleClick(e) {
    const args = {
-      bubbles: true,
-      cancelable: false,
-      composed: true,
-      // value coming from input change event. 
-      detail:e,
+        bubbles: true,
+        cancelable: false,
+        composed: true,
+        // value coming from input change event. 
+        detail:e,
     };
     const event = new CustomEvent('ntx-value-change', args);
     this.dispatchEvent(event);
     console.log(e);
   }
-
   constructor() {
     super();
-    this.slid = false;
+    //this.checkAdress();
+    
   }
  
   render() {
@@ -85,4 +102,5 @@ _handleClick(e) {
     `;
   }
 }
-customElements.define('motion-slide', MotionSlide);
+const elementName = 'stars-plugin';
+customElements.define(elementName, StarsPlugin);
