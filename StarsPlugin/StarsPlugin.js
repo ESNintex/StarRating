@@ -75,8 +75,7 @@ export class StarsPlugin extends LitElement {
         outcome: {
           title: 'Rating',
           type: 'integer',
-        	description: 'Insert a Variable, to save the Rating',
-          isValueField: true
+        	description: 'Insert a Variable, to save the Rating'
         },        
       },
       events: ["ntx-value-change"],
