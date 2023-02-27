@@ -52,8 +52,8 @@ export class StarsPlugin extends LitElement {
       properties: { 
         outcome: {
           title: 'Rating',
-          type: 'integer',
-        	description: 'Insert a Variable, to save the Rating',
+          type: 'number',
+          description: 'Insert a Variable, to save the Rating',
           isValueField: true
         },        
       },
